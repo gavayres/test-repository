@@ -14,9 +14,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # only turns off Flask Sql
 app.secret_key = 'gavin'
 api = Api(app)
 
-@app.before_first_request  # runs below method before first request to app is made
-def create_tables():
-    db.create_all()
+#@app.before_first_request  # runs below method before first request to app is made
+#def create_tables():
+#    db.create_all()
 
 jwt = JWT(app, authenticate, identity)
 
